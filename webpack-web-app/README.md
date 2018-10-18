@@ -27,3 +27,11 @@ Then run from the command line with:
 ```
 live-server ./dist
 ```
+
+## Live Reloading (Option 2 - webpack-dev-server)
+`webpack-dev-server` has been added to the project using `npm install --save-dev webpack-dev-server` and `webpack.config.js` has been updated to specify the webpack output folder that should be used. A start script has also been added to `package.json` to execute `webpack-dev-server --open`.
+
+From the command line you can now execute the following command:
+```
+npm run-script start
+```

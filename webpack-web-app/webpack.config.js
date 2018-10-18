@@ -12,7 +12,10 @@ module.exports = {
             template: 'public/index.html',
             favicon: "public/favicon.png"
         })
-    ],        
+    ],
+    devServer: {
+        contentBase: './dist'
+    }, 
     output: {
         path: path.resolve(__dirname, "./dist"),
         filename: "bundle.js",
