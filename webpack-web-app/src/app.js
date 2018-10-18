@@ -37,3 +37,9 @@ export default class App extends React.Component {
         </div>;
     }
 }
+
+if (module.hot) {
+    module.hot.accept('./string-modifier.js', function () {
+        console.log('Accepting the updated String Modifier module from app.js!');
+    })
+}

@@ -1,5 +1,6 @@
 const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
+const webpack = require("webpack");
 
 module.exports = {
     mode: "development",
@@ -11,10 +12,12 @@ module.exports = {
             title: 'My App',
             template: 'public/index.html',
             favicon: "public/favicon.png"
-        })
+        }),
+        new webpack.HotModuleReplacementPlugin()
     ],
     devServer: {
-        contentBase: './dist'
+        contentBase: './dist',
+        hot: true
     }, 
     output: {
         path: path.resolve(__dirname, "./dist"),
