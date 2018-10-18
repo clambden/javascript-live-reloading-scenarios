@@ -16,3 +16,14 @@ Then launch the web server with:
 ```
 http-server ./dist
 ```
+
+## Live Reloading (Option 1 - webpack --watch)
+Executing the following command to compile the application and watch for saved changes to re-build (see `package.json` for details of the `watch` script): 
+```
+npm run-script watch
+```
+
+Then run from the command line with:
+```
+live-server ./dist
+```
