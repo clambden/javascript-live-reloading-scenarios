@@ -9,5 +9,13 @@ if (module.hot) {
 
     module.hot.accept('./listener.js', () => {
         console.log('[HMR Accept] Accepting the updated listener.js module from index.js!');
+
+        server.close(() => {
+            server = http.createServer(listener)
+            server.listen(port);
+
+            console.log('[HMR Accept] Recreated httpServer with new listener!');
+
+        });
     });
   }
