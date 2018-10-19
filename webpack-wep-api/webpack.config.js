@@ -1,4 +1,5 @@
 const path = require("path");
+const StartServerPlugin = require("start-server-webpack-plugin");
 
 module.exports = {
     mode: 'development',
@@ -10,6 +11,9 @@ module.exports = {
         filename: "bundle.js",
         path: path.resolve(__dirname, "./build"),
     },
+    plugins: [
+      new StartServerPlugin("bundle.js"),
+    ],
     module: {
         rules: [
           {
